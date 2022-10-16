@@ -55,7 +55,7 @@ class PostCRUDController extends Controller
 
      
         return redirect()->route('posts.index')
-                        ->with('success','Post has been created successfully.');
+                        ->with('success','Movie has been created successfully.');
     }
      
     /**
@@ -67,6 +67,7 @@ class PostCRUDController extends Controller
     public function show(Post $post)
     {
         return view('posts.show',compact('post'));
+       
     } 
      
     /**
@@ -109,7 +110,7 @@ class PostCRUDController extends Controller
         $post->save();
     
         return redirect()->route('posts.index')
-                        ->with('success','Post updated successfully');
+                        ->with('success','Movie updated successfully');
     }
     
     /**
@@ -123,6 +124,6 @@ class PostCRUDController extends Controller
         $post->delete();
     
         return redirect()->route('posts.index')
-                        ->with('success','Post has been deleted successfully');
+                        ->with('success','Movie has been deleted successfully');
     }
 }

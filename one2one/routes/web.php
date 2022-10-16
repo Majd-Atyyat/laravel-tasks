@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostCRUDController;
-use App\Http\Controllers\homeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +16,3 @@ use App\Http\Controllers\homeController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-
-Route::resource('posts', PostCRUDController::class);
-Route::resource('home', homeController::class);
